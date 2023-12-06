@@ -21,7 +21,23 @@ steps{
 
 }  
 }
+stage('Build Docker Image') {
+    steps {
+        script {
+            // Build Docker image for AngularJS app
+            dir('hrms') {
+                // Set the desired Docker image name
+                def dockerImageName = 'sai'
 
+                // Build the Docker image
+                def dockerImage = docker.build(dockerImageName, '-f Dockerfile .')
+
+                
+            
+            }
+        }
+    }
+}
 
     
   }
