@@ -44,7 +44,7 @@ stage("deploy") {
     steps {
         script {
             // Run Docker container for deployment
-            docker.image('sai').run('-d -p 8081:4200', 'sc')
+            docker.image('sai').run('-d -p 8081:4200', '--name sc')
         }
     }
 }
