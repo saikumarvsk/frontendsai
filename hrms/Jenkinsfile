@@ -8,14 +8,14 @@ pipeline{
       git 'https://github.com/saikumarvsk/frontendsai.git'
     }
     }
-stage("build"){
+stage('build'){
 steps{
-  dir("hrms"){
+  dir('hrms'){
     
   
   script{
-    'sh npm install'
-    'sh npm run build'
+    sh 'npm install'
+    sh 'npm run build'
   }
 }
 
