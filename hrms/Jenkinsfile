@@ -19,3 +19,13 @@ pipeline{
     }
   }
 }
+stage('Build Docker Image') {
+    steps {
+        script {
+            dir('hrms') {
+                def dockerImageName = 'sai'
+                def dockerImage = docker.build(dockerImageName, '-f Dockerfile .')
+            }
+        }
+    }
+}
