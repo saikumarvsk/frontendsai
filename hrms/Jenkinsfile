@@ -11,8 +11,7 @@ stage('build'){
   steps{
     dir('hrms'){
       script{
-        sh 'npm install'
-        sh 'npm run build'
+        sh 'docker build -t frontend .'
       }
     }
   }
