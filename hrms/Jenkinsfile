@@ -27,5 +27,12 @@ stage('Build Docker Image') {
         }
     }
 }
+    stage("deploy") {
+    steps {
+        script {
+            sh 'docker run -p 4200:4200 sai'
+        }
+    }
+}
 }
 }
